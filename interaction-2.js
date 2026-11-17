@@ -76,7 +76,7 @@ function deviceShaken() {
     statusLabels[0].style("color", "pink");
     if (!dspNode) return;
     dspNode.setParamValue("englishBell/strikePosition", random(200, 800));   // random note on every shake
-    playAudio();
+    //playAudio();
 
 }
 
