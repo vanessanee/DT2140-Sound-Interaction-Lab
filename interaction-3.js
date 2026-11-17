@@ -52,7 +52,7 @@ brass.createDSP(audioContext, 1024)
 //==========================================================================================
 
 function accelerationChange(accx, accy, accz) {
-    // playAudio()
+    playAudio()
 }
 
 function rotationChange(rotx, roty, rotz) {
