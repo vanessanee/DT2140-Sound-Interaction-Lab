@@ -52,7 +52,7 @@ bubble_created.createDSP(audioContext, 1024)
 //==========================================================================================
 
 function accelerationChange(accx, accy, accz) {
-    playAudio()
+    // playAudio()
 
 }
 
@@ -72,7 +72,7 @@ function rotationChange(rotx, roty, rotz) {
 
 
 function mousePressed() {
-    playAudio()
+    // playAudio()
     // Use this for debugging from the desktop!
 }
 
@@ -85,9 +85,9 @@ function deviceTurned() {
     threshVals[1] = turnAxis;
 }
 function deviceShaken() {
-    shaketimer = millis();
-    statusLabels[0].style("color", "pink");
-    playAudio();
+    // shaketimer = millis();
+    // statusLabels[0].style("color", "pink");
+    // playAudio();
 }
 
 function getMinMaxParam(address) {
