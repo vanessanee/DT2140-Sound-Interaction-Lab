@@ -12,7 +12,7 @@ let dspNodeParams = null;
 let jsonParams = null;
 
 // Change here to ("tuono") depending on your wasm file name
-const dspName = "drop";
+const dspName = "bells";
 const instance = new FaustWasm2ScriptProcessor(dspName);
 
 // output to window or npm package module
@@ -74,7 +74,10 @@ function deviceTurned() {
 function deviceShaken() {
     shaketimer = millis();
     statusLabels[0].style("color", "pink");
+    if (!dspNode) return;
+    dspNode.setParamValue("englishBell/strikePosition", random(200, 800));   // random note on every shake
     playAudio();
+
 }
 
 function getMinMaxParam(address) {

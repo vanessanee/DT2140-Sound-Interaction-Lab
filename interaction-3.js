@@ -52,7 +52,10 @@ brass.createDSP(audioContext, 1024)
 //==========================================================================================
 
 function accelerationChange(accx, accy, accz) {
-    playAudio()
+    const movement = abs(accx - pAccelerationX) + abs(accy - pAccelerationY) + abs(accz - pAccelerationZ);
+    const target = constrain(map(movement, 1, 10, 0, 1), 0, 1);
+    pressure = pressure * 0.9 + target * 0.1;
+    playAudio(pressure);
 }
 
 function rotationChange(rotx, roty, rotz) {
